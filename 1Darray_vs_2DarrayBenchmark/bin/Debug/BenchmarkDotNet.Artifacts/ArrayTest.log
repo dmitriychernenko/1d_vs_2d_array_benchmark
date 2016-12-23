@@ -1,0 +1,74 @@
+// ***** BenchmarkRunner: Start   *****
+// Found benchmarks:
+//   ArrayTest.FirstArray: DefaultJob
+//   ArrayTest.SecondArray: DefaultJob
+
+// Validating benchmarks:
+Assembly 1Darray_vs_2DarrayBenchmark, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null which defines benchmarks is non-optimized
+// **************************
+// Benchmark: ArrayTest.FirstArray: DefaultJob
+// *** Generate *** 
+// Result = Success
+// BinariesDirectoryPath = c:\users\dmitriy\documents\visual studio 2015\Projects\1Darray_vs_2DarrayBenchmark\1Darray_vs_2DarrayBenchmark\bin\Debug
+
+// *** Build ***
+BuildScript: c:\users\dmitriy\documents\visual studio 2015\Projects\1Darray_vs_2DarrayBenchmark\1Darray_vs_2DarrayBenchmark\bin\Debug\BDN.Generated.bat
+CS7036: There is no argument given that corresponds to the required formal parameter 'sizeI' of 'ArrayTest.ArrayTest(int, int)'// Result = Failure
+
+
+// **************************
+// Benchmark: ArrayTest.SecondArray: DefaultJob
+// *** Generate *** 
+// Result = Success
+// BinariesDirectoryPath = c:\users\dmitriy\documents\visual studio 2015\Projects\1Darray_vs_2DarrayBenchmark\1Darray_vs_2DarrayBenchmark\bin\Debug
+
+// *** Build ***
+BuildScript: c:\users\dmitriy\documents\visual studio 2015\Projects\1Darray_vs_2DarrayBenchmark\1Darray_vs_2DarrayBenchmark\bin\Debug\BDN.Generated.bat
+CS7036: There is no argument given that corresponds to the required formal parameter 'sizeI' of 'ArrayTest.ArrayTest(int, int)'// Result = Failure
+
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\ArrayTest-report.csv
+  BenchmarkDotNet.Artifacts\results\ArrayTest-report-github.md
+  BenchmarkDotNet.Artifacts\results\ArrayTest-report.html
+
+// * Detailed results *
+ArrayTest.FirstArray: DefaultJob
+Runtime = ; GC = 
+There are no any results runs
+
+ArrayTest.SecondArray: DefaultJob
+Runtime = ; GC = 
+There are no any results runs
+
+Total time: 00:00:01 (1.99 sec)
+
+// * Summary *
+
+BenchmarkDotNet=v0.10.1, OS=Microsoft Windows NT 6.2.9200.0
+Processor=Intel(R) Core(TM) i7-4702HQ CPU 2.20GHz, ProcessorCount=8
+Frequency=2143483 Hz, Resolution=466.5304 ns, Timer=TSC
+  [Host] : Clr 4.0.30319.42000, 32bit LegacyJIT-v4.6.1586.0DEBUG
+
+Allocated=N/A  
+
+      Method | Mean |
+------------ |----- |
+  FirstArray |   NA |
+ SecondArray |   NA |
+
+Benchmarks with issues:
+  ArrayTest.FirstArray: DefaultJob
+  ArrayTest.SecondArray: DefaultJob
+
+*** Warnings ***
+Environment
+  ArrayTest.FirstArray: Default  -> Benchmark was built in DEBUG configuration. Please, build it in RELEASE.
+  ArrayTest.SecondArray: Default -> Benchmark was built in DEBUG configuration. Please, build it in RELEASE.
+
+// * Diagnostic Output - MemoryDiagnoser *
+Note: the Gen 0/1/2 Measurements are per 1k Operations
+
+// ***** BenchmarkRunner: End *****

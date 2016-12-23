@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>ArrayTest</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.10.1, OS=Microsoft Windows NT 6.2.9200.0
+Processor=Intel(R) Core(TM) i7-4702HQ CPU 2.20GHz, ProcessorCount=8
+Frequency=2143483 Hz, Resolution=466.5304 ns, Timer=TSC
+  [Host]     : Clr 4.0.30319.42000, 32bit LegacyJIT-v4.6.1586.0
+  DefaultJob : Clr 4.0.30319.42000, 32bit LegacyJIT-v4.6.1586.0
+</code></pre>
+<pre><code>Allocated=0 B  
+</code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>I</th><th>J</th><th>Mean</th><th>StdErr</th><th>StdDev</th>
+</tr>
+</thead><tbody><tr><td>FirstArray</td><td>0</td><td>0</td><td>0.9325 ns</td><td>0.0072 ns</td><td>0.0270 ns</td>
+</tr><tr><td>SecondArray</td><td>0</td><td>0</td><td>0.8229 ns</td><td>0.0041 ns</td><td>0.0157 ns</td>
+</tr><tr><td>FirstArray</td><td>0</td><td>25</td><td>0.9116 ns</td><td>0.0043 ns</td><td>0.0167 ns</td>
+</tr><tr><td>SecondArray</td><td>0</td><td>25</td><td>0.8348 ns</td><td>0.0062 ns</td><td>0.0234 ns</td>
+</tr><tr><td>FirstArray</td><td>0</td><td>50</td><td>0.9432 ns</td><td>0.0063 ns</td><td>0.0244 ns</td>
+</tr><tr><td>SecondArray</td><td>0</td><td>50</td><td>0.8079 ns</td><td>0.0065 ns</td><td>0.0253 ns</td>
+</tr><tr><td>FirstArray</td><td>0</td><td>75</td><td>0.9398 ns</td><td>0.0043 ns</td><td>0.0160 ns</td>
+</tr><tr><td>SecondArray</td><td>0</td><td>75</td><td>0.8443 ns</td><td>0.0052 ns</td><td>0.0202 ns</td>
+</tr><tr><td>FirstArray</td><td>0</td><td>99</td><td>0.9419 ns</td><td>0.0033 ns</td><td>0.0120 ns</td>
+</tr><tr><td>SecondArray</td><td>0</td><td>99</td><td>0.8187 ns</td><td>0.0059 ns</td><td>0.0229 ns</td>
+</tr><tr><td>FirstArray</td><td>25</td><td>0</td><td>0.9411 ns</td><td>0.0072 ns</td><td>0.0279 ns</td>
+</tr><tr><td>SecondArray</td><td>25</td><td>0</td><td>0.8488 ns</td><td>0.0048 ns</td><td>0.0187 ns</td>
+</tr><tr><td>FirstArray</td><td>25</td><td>25</td><td>0.9319 ns</td><td>0.0046 ns</td><td>0.0176 ns</td>
+</tr><tr><td>SecondArray</td><td>25</td><td>25</td><td>0.8183 ns</td><td>0.0056 ns</td><td>0.0202 ns</td>
+</tr><tr><td>FirstArray</td><td>25</td><td>50</td><td>0.9329 ns</td><td>0.0084 ns</td><td>0.0325 ns</td>
+</tr><tr><td>SecondArray</td><td>25</td><td>50</td><td>0.7834 ns</td><td>0.0031 ns</td><td>0.0122 ns</td>
+</tr><tr><td>FirstArray</td><td>25</td><td>75</td><td>0.9063 ns</td><td>0.0044 ns</td><td>0.0171 ns</td>
+</tr><tr><td>SecondArray</td><td>25</td><td>75</td><td>0.8023 ns</td><td>0.0044 ns</td><td>0.0171 ns</td>
+</tr><tr><td>FirstArray</td><td>25</td><td>99</td><td>0.9327 ns</td><td>0.0039 ns</td><td>0.0146 ns</td>
+</tr><tr><td>SecondArray</td><td>25</td><td>99</td><td>0.7990 ns</td><td>0.0055 ns</td><td>0.0214 ns</td>
+</tr><tr><td>FirstArray</td><td>50</td><td>0</td><td>0.9479 ns</td><td>0.0087 ns</td><td>0.0336 ns</td>
+</tr><tr><td>SecondArray</td><td>50</td><td>0</td><td>0.8232 ns</td><td>0.0047 ns</td><td>0.0182 ns</td>
+</tr><tr><td>FirstArray</td><td>50</td><td>25</td><td>0.9368 ns</td><td>0.0052 ns</td><td>0.0203 ns</td>
+</tr><tr><td>SecondArray</td><td>50</td><td>25</td><td>0.8067 ns</td><td>0.0032 ns</td><td>0.0114 ns</td>
+</tr><tr><td>FirstArray</td><td>50</td><td>50</td><td>0.9663 ns</td><td>0.0037 ns</td><td>0.0127 ns</td>
+</tr><tr><td>SecondArray</td><td>50</td><td>50</td><td>0.8251 ns</td><td>0.0077 ns</td><td>0.0298 ns</td>
+</tr><tr><td>FirstArray</td><td>50</td><td>75</td><td>0.9270 ns</td><td>0.0057 ns</td><td>0.0223 ns</td>
+</tr><tr><td>SecondArray</td><td>50</td><td>75</td><td>0.8341 ns</td><td>0.0039 ns</td><td>0.0141 ns</td>
+</tr><tr><td>FirstArray</td><td>50</td><td>99</td><td>0.9163 ns</td><td>0.0040 ns</td><td>0.0149 ns</td>
+</tr><tr><td>SecondArray</td><td>50</td><td>99</td><td>0.8295 ns</td><td>0.0018 ns</td><td>0.0063 ns</td>
+</tr><tr><td>FirstArray</td><td>75</td><td>0</td><td>0.9176 ns</td><td>0.0056 ns</td><td>0.0217 ns</td>
+</tr><tr><td>SecondArray</td><td>75</td><td>0</td><td>0.8205 ns</td><td>0.0036 ns</td><td>0.0137 ns</td>
+</tr><tr><td>FirstArray</td><td>75</td><td>25</td><td>0.9356 ns</td><td>0.0024 ns</td><td>0.0083 ns</td>
+</tr><tr><td>SecondArray</td><td>75</td><td>25</td><td>0.8327 ns</td><td>0.0052 ns</td><td>0.0201 ns</td>
+</tr><tr><td>FirstArray</td><td>75</td><td>50</td><td>0.9239 ns</td><td>0.0024 ns</td><td>0.0094 ns</td>
+</tr><tr><td>SecondArray</td><td>75</td><td>50</td><td>0.8139 ns</td><td>0.0058 ns</td><td>0.0223 ns</td>
+</tr><tr><td>FirstArray</td><td>75</td><td>75</td><td>0.9672 ns</td><td>0.0096 ns</td><td>0.0370 ns</td>
+</tr><tr><td>SecondArray</td><td>75</td><td>75</td><td>0.8482 ns</td><td>0.0048 ns</td><td>0.0188 ns</td>
+</tr><tr><td>FirstArray</td><td>75</td><td>99</td><td>0.9299 ns</td><td>0.0051 ns</td><td>0.0182 ns</td>
+</tr><tr><td>SecondArray</td><td>75</td><td>99</td><td>0.8005 ns</td><td>0.0063 ns</td><td>0.0245 ns</td>
+</tr><tr><td>FirstArray</td><td>99</td><td>0</td><td>0.9243 ns</td><td>0.0029 ns</td><td>0.0111 ns</td>
+</tr><tr><td>SecondArray</td><td>99</td><td>0</td><td>0.8193 ns</td><td>0.0057 ns</td><td>0.0220 ns</td>
+</tr><tr><td>FirstArray</td><td>99</td><td>25</td><td>0.9326 ns</td><td>0.0110 ns</td><td>0.0426 ns</td>
+</tr><tr><td>SecondArray</td><td>99</td><td>25</td><td>0.8424 ns</td><td>0.0054 ns</td><td>0.0210 ns</td>
+</tr><tr><td>FirstArray</td><td>99</td><td>50</td><td>0.9441 ns</td><td>0.0049 ns</td><td>0.0184 ns</td>
+</tr><tr><td>SecondArray</td><td>99</td><td>50</td><td>0.8444 ns</td><td>0.0028 ns</td><td>0.0110 ns</td>
+</tr><tr><td>FirstArray</td><td>99</td><td>75</td><td>0.9286 ns</td><td>0.0124 ns</td><td>0.0480 ns</td>
+</tr><tr><td>SecondArray</td><td>99</td><td>75</td><td>0.8225 ns</td><td>0.0054 ns</td><td>0.0203 ns</td>
+</tr><tr><td>FirstArray</td><td>99</td><td>99</td><td>0.9339 ns</td><td>0.0038 ns</td><td>0.0142 ns</td>
+</tr><tr><td>SecondArray</td><td>99</td><td>99</td><td>0.8151 ns</td><td>0.0041 ns</td><td>0.0158 ns</td>
+</tr></tbody></table>
+</body>
+</html>
