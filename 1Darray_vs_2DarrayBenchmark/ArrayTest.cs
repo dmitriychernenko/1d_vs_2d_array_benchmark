@@ -41,7 +41,7 @@ namespace _1Darray_vs_2DarrayBenchmark
         [Benchmark]
         public byte FirstArray()
         {
-            return firstArray[J * sizeI + I];
+            return firstArray[I * sizeJ + J];
         }
 
         [Benchmark]
